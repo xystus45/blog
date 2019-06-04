@@ -1,4 +1,4 @@
-# 
+# Blog Posting Application 
 
 #### This is an application that users can post an article on the webpage. 
 
