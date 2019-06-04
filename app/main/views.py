@@ -6,7 +6,7 @@ from .forms import PostForm, CommentForm
 from flask_login import login_required, current_user
 import datetime
 from ..email import mail_message
-# from ..request import get_quotes
+from ..request import get_quotes
 
 # views
 @main.route("/")

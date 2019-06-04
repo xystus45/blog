@@ -5,14 +5,14 @@ from . import login_manager
 from datetime import datetime
 
 
-# class Quote:
-#     '''
-#     Quotes class to define quotes object
-#     '''
+class Quote:
+    '''
+    Quotes class to define quotes object
+    '''
 
-#     def __init__(self, author, quote):
-#         self.author = author
-#         self.quote = quote
+    def __init__(self, author, quote):
+        self.author = author
+        self.quote = quote
 
 
 @login_manager.user_loader

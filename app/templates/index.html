@@ -14,10 +14,10 @@
         <div class="squares square6"></div>
         <div class="squares square7"></div>
         <div class="container">
-            <div class="content-center brand">
-                <h1 class="h1-seo"> {{ quote[0] }} </h1>
-                <h3> {{quote[1]}} </h3>
-            </div>
+          {%for quote in quote%}
+            <p>{{quote.quote}}</p>
+            <i>{{quote.author}}</i>
+          {%endfor%}
         </div>
     </div>
 

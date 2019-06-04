@@ -1,6 +1,6 @@
-import urllib.request
-import json
+import urllib.request,json
 from .models import Quote
+
 
 # getting the quotes base url
 
@@ -18,12 +18,13 @@ def get_quotes():
     Function that gets json response to our url request
     '''
 
-    get_quotes_url = base_url
+    # get_quotes_url = base_url.format()
 
-    with urllib.request.urlopen(get_quotes_url) as url:
+    with urllib.request.urlopen('http://quotes.stormconsultancy.co.uk/random.json') as url:
         get_quotes_data = url.read()
         get_quotes_response = json.loads(get_quotes_data)
-
+        quote_results= None
+        quote_results=get_quotes_response
         quotes_results = process_results(get_quotes_response)
 
     return quotes_results
@@ -40,15 +41,10 @@ def process_results(quotes_list):
 
     quote_results = []
 
-    for keys, value in quotes_list.items():
-        if keys == 'author':
-            author = value
+    quote=quotes_list
+    author=quotes_list
+    quote_dict=Quote(quote,author)
+    quote_results.append(quote_dict.quote)
 
-            quote_results.append(author)
-
-        if keys == 'quote':
-            quote = value
-
-            quote_results.append(quote)
 
     return quote_results
