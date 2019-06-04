@@ -9,7 +9,7 @@
 
 ## Setup/Installation Requirements
 First clone the repo
-   ```$ git clone ```
+   ```$ git clone https://github.com/xystus45/blog ```
 
 After cloning, navigate to the project:
    `` $ cd blog-flask``
